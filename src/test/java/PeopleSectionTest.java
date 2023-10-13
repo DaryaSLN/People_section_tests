@@ -13,4 +13,13 @@ public class PeopleSectionTest extends BaseTest {
         Assert.assertTrue(peoplePresent);
     }
 
+    @Test
+    public void testPeopleSectionAsUser() {
+        boolean peoplePresent = new LoginPage(getDriver())
+                .loginAsUser()
+                .isPeoplePresent();
+
+        Assert.assertFalse(peoplePresent);
+    }
+
 }

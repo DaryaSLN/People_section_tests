@@ -25,4 +25,11 @@ public class LoginPage extends BasePage {
         loginButton.click();
         return new ProjectsPage(getDriver());
     }
+
+    public ProjectsPage loginAsUser() {
+        getWait2().until(ExpectedConditions.visibilityOf(email)).sendKeys(LoginUtils.getUserEmail());
+        password.sendKeys(LoginUtils.getUserPassword());
+        loginButton.click();
+        return new ProjectsPage(getDriver());
+    }
 }

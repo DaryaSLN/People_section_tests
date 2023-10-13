@@ -29,4 +29,14 @@ public class LoginUtils {
         return properties.getProperty("local.owner.password");
     }
 
+    static String getUserEmail() {
+        initProperties();
+        return properties.getProperty("local.user.email");
+    }
+
+    static String getUserPassword() {
+        initProperties();
+        return properties.getProperty("local.user.password");
+    }
+
 }
