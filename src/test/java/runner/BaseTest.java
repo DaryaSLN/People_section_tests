@@ -15,7 +15,7 @@ public abstract class BaseTest {
     }
 
     @AfterMethod
-    protected void afterMethod () {
+    protected void afterMethod() {
         driver.quit();
     }
 
